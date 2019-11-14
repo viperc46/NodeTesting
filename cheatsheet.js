@@ -160,3 +160,27 @@ module.exports = "Bitch";
 //when you require it you have to require the path best way to do this is with a ./ its super nice 
 // there is an event emmitter that does stuff which is similar to the wtitch bot 
 //gonna add this here to commit git push -u origin master
+
+//reading files 
+
+const fs = require("fs"); 
+
+const text = fs.readFileSync("Insert file name here", "UTF-8"); 
+//this is the syncronus version you can also do it with a function as well but sometimes it not worth it and its extra work because then you need a callback function 
+//but like fuck that i mean it has it good uses but it does the same thing 
+// you can also read binary 
+// but now onto writing files 
+
+fs.writeFile("./SbigBot/coolshit.md", md.trim(), err => {
+    if(err){
+        throw err
+    }
+    console.log("File saved muchacho. Youve done a good thing. ")
+})
+
+//There you have it you wrote a file. Are you proud of yourself yet kid? Well were not done yet
+//Now well append shit because we can 
+
+fs.appendFile("./SbigBot/mood.md","Insert things here for stuff what you want to append \n");
+
+//you can rename files as well but thats just being extra 
